@@ -1,0 +1,14 @@
+<div class="submission-content">
+	<% @submissions.each do |story| %>
+		<div class="leftimage">
+			<img src="<%= story.pic %>">
+		</div>
+		<div class="story">
+			<span class="story-name"><%= story.name %> wrote:</span>
+			<p class="story-content"><%= story.content %></p>
+		</div>
+		<div class="foot">
+			<p>At <%= story.created_at %></p>
+		</div>
+	<% end %>
+</div>

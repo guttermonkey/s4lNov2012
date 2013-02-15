@@ -1,0 +1,10 @@
+development:
+  app_id: '<development app id>'
+  secret: '<development secret key>'
+  canvas: '<development canvas name>'
+  callback_host: '127.0.0.1:5000'
+production:
+  app_id: '<production app id>'
+  secret: '<production secret key>'
+  canvas: '<production canvas name>'
+  callback_host: '<heroku url>'

@@ -1,0 +1,12 @@
+<div class="resources-content">
+	<div class="resource">
+		<span><a href="http://www.screeningsforlife.com/index2.php" target="_blank">Screenings for Life</a></span>
+		<p>Please see our website for lots of resources including detection, screening and survivor stories.</p>
+	</div>
+	<% @resources.each do |resource| %>
+		<div class="resource">
+			<span><a href="<%= resource.link %>" target="_blank"><%= resource.name %></a></span>
+			<p><%= resource.synopsis %></p>
+		</div>
+	<% end %>
+</div>

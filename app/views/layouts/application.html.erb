@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+ xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+  <title>Screenings4life</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="fb-root"></div>      
+	<script>
+		window.fbAsyncInit = function() {
+			FB.Flash.hasMinVersion = function () { return false; };
+			FB.init({
+				appId      : '<%= Facebook::APP_ID %>', // App ID
+				oauth      : true,
+				status     : true, // check login status
+				cookie     : true, // enable cookies to allow the server to access the session
+				xfbml      : true  // parse XFBML
+			});
+
+			// Additional initialization code here
+		};
+
+		// Load the SDK Asynchronously
+		(function(d){
+			var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+			js = d.createElement('script'); js.id = id; js.async = true;
+			js.src = "//connect.facebook.net/en_US/all.js";
+			d.getElementsByTagName('head')[0].appendChild(js);
+		}(document));
+	</script>
+	
+	<div id="header">
+		<%=image_tag("fallbanner520.jpg")%>
+	</div>
+	
+	<div id="navigation">
+		<ul>
+			<li><a href="/home/index">Home</a></li>
+			<!-- <li><a href="#">Events</a></li> -->
+			<li><a href="/home/info">Information</a></li>
+			<li><a href="/home/resources">Resources</a></li>
+		</ul>
+	</div>
+
+	<div id="main">
+		<%= yield %>
+		
+		<div id="tagline">
+			Content designed and maintained by: <a href="http://www.twitter.com/guttermonkey" target="_blank">Rick Wilson</a>
+		</div>
+	</div>
+
+</body>
+</html>

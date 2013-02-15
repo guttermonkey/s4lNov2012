@@ -1,0 +1,12 @@
+development:
+  app_id: <development app id>
+  secret_key: <development secret key>
+  callback_url: http://localhost:5000/
+test:
+  app_id: <development app id>
+  secret_key: <development secret key>
+  callback_url: http://localhost:5000/
+production:
+  app_id: <production app id>
+  secret_key: <production secret key>
+  callback_url: <heroku url>

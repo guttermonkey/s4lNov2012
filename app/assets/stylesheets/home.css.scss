@@ -1,0 +1,203 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/** Variables **/
+//$bgcolor: #952972;
+$bgcolor: #F7EB5C;
+// $border: #FEAC69;
+$border: #AB1D23;
+//$navback: #FEE6D1;
+$navback: #BD4F31;
+//$navlinks: #906;
+$navlinks: #FFFFFF;
+//$textcolor: #6A1A63;
+$textcolor: #575833;
+
+/** Main Layout **/
+html, body {
+  background: {
+    // image: url(../images/bg_stripe.gif);
+    color: $bgcolor;
+    // repeat: repeat;
+  }
+  font-family: Helvetica, Arial, Sans;
+}
+
+body {
+  width: 520px;
+  padding: 0px;
+  margin: {
+    top: 10px;
+  }
+}
+
+#header {
+  height: 148px;
+  border-bottom: 3px solid $border;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+#navigation {
+  height: 24px;
+  background-color: $navback;
+  border: {
+    left: 3px solid $border;
+    right: 3px solid $border;
+  }
+  font: {
+    size: 12px;
+    weight: bold;
+  }
+  text-align: center;
+  padding: {
+    top: 6px;
+    left: 14px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: $textcolor;
+    display: block;
+  }
+  li {
+    float: left;
+    padding: {
+      top: 0px;
+      right: 22px;
+      left: 22px;
+      bottom: 22px;
+    }
+    font: {
+      size: 14px;
+      weight: bold;
+    }
+    display: inline;
+    list-style-type: none;
+    a {
+      text-decoration: none;
+      color: $navlinks;
+    }
+  }
+}
+
+#main {
+  background-color: white;
+  color: $textcolor;
+  margin: 0;
+  width: 514px;
+  border: {
+    left: 3px solid $border;
+    right: 3px solid $border;
+    bottom: 3px solid $border;
+  }
+  a {
+    color: inherit;
+  }
+  #tagline {
+    padding-top: 150px;
+    padding-left: 2.5em;
+    font-size: 40%;
+  }
+}
+
+.content {
+  clear: both;
+  display: block;
+  padding: {
+    right: 2.5em;
+    left: 2.5em;
+  }
+  h1 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: $textcolor;
+  }
+  p {
+    padding-top: 20px;
+    font-size: 14px;
+  }
+  
+  #rules {
+    clear: both;
+    padding-top: 50px;
+    font-size: 10px;
+  }
+  
+  #floatright {
+    float: right;
+    width: 160px;
+    padding: {
+      top: 0px;
+      right: 0px;
+      left: 50px;
+      bottom: 20px;
+    }
+    margin: {
+      right: -2.5em;
+      top: 1.2em;
+    }
+  }
+}
+
+.submission-content {
+  clear: both;
+  h1 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: $textcolor;
+    padding-bottom: 20px;
+  }
+  margin-left: 0;
+  padding: {
+    left: 2.5em;
+    right: 2.5em;
+  }
+  .leftimage {
+    float: left;
+  }
+  .story {
+    float: right;
+    width: 385px;
+    .story-name {
+      font-size: 110%;
+      font-weight: bold;
+    }
+    .story-content {
+      display: block;
+    }
+  }
+  .foot
+  {
+    clear: both;
+    margin-left: 20em;
+    p {
+      font-size: 75%;
+    }
+  }
+}
+
+.resources-content {
+  clear: both;
+  margin-left: 0;
+  padding: {
+    left: 2.5em;
+    right: 2.5em;
+  }
+  .resource {
+    span {
+      font-weight: bold;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+    p {
+      display: block;
+    }
+  }
+}

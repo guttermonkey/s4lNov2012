@@ -1,0 +1,26 @@
+%script{:type => "text/javascript"}
+  :plain
+    function doIt() {
+    FB.login(function(response) {
+    if (response.authResponse) {
+    location.href = '/home/check';
+    } else {
+    location.href = '/home/submissions';
+    }
+    }, {scope: 'publish_stream'});
+    }
+
+.content
+  %h1.title November 2011 Mammo Giveaway!
+  %p
+    Screenings for Life will be giving away one Mammogram to one lucky winner!  Enter by telling us
+    what you're most thankful for.  The drawing will be held on December 1 2011 and the winner
+    notified through Facebook, limit of one entry per person.  The free screening is transferrable
+    so guys don't be afraid to enter as well!
+  %p
+    %a{:href => "/home/novrules"} Official Rules and Details
+  %p
+    Please click the button below to continue to the entry page.
+  %input{:type => "image", :src => "/assets/fbconnect.png", :onClick => "doIt();"}
+  %p
+    %a{:href => "/home/submissions"} See all of the submissions

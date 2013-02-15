@@ -1,0 +1,9 @@
+.content
+  %h1.title November 2011 Mammo Giveaway!
+  %p
+    To enter the drawing simply fill out the area below with what you're thankful for.
+  .form
+    %form{:action => "/home/submit", :method => "post"}
+      %label{:for => "story"} What are you thankful for?
+      %textarea{:name => "story"}
+      %input{:type => "submit", :value=>"Enter the drawing!"}
